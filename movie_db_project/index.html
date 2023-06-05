@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Movie DB</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="logo.svg">
+            </div>
+            <div>
+                <ul class="nav-bar">
+                    <li class="tab-item active" name="HOME">HOME</li>
+                    <li class="tab-item" name="LIKED">LIKED</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="select-container">
+            <select class="filter-select" id="select">
+                <option value="popular">Popular</option>
+                <option value="now_playing">Now playing</option>
+                <option value="top_rated">Top Rated</option>
+                <option value="upcoming">Upcoming</option>
+            </select>
+        </div>
+        <div class="pagination-container">
+            <button id="prevButton" class="btn"> prev</button>
+            <p id="currentPage"> 1 / 38579</p>
+            <button id="nextButton" class="btn"> next</button>
+        </div>
+        
+        <div class="tab-view tab-view-active" id="homeContainer">
+            <div class="list-container" id="movieList">
+
+            </div>
+        </div>
+
+        <div class="tab-view" id="likedContainer">
+            <div class="list-container" id="likedList">
+
+            </div>
+
+        </div>
+    </main>
+    <div id="modal">
+        <div class="modal-container">
+          <div class="close-modal">
+            <i class="icon ion-md-close"></i>
+          </div>
+          <div class="modal-content">
+          </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
